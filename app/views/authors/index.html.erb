@@ -2,7 +2,7 @@
 <div>
         <% @authors.each do |author| %>
         <ul style="list-style-type:circle;">
-        <li><%= author.name %></li>
+        <li><%= author.name %> <%= link_to "See details", author_path(author) %></li>
         </ul>
         <% end %>
 </div><br>

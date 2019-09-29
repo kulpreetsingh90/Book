@@ -4,5 +4,18 @@
     <%= f.text_field :name %>
   </div>
 
+  <div>
+      <div>
+        <%= f.label :author_image %>
+      </div>
+      <div>
+        <%= f.file_field :author_image%>
+        <% if @authors.author_image.attached? %>
+          <hr/>
+          <%= image_tag @authors.author_image.variant(resize: "500x500") %>
+        <% end %>
+      </div>
+    </div>
+
   <div><%= f.submit %></div>
 <% end %>

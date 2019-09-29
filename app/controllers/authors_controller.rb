@@ -4,6 +4,10 @@ class AuthorsController < ApplicationController
       @authors = Author.all
     end
 
+    def show 
+      @author = Author.find(params[:id])
+    end
+
     def new 
       @authors = Author.new
     end
@@ -18,7 +22,7 @@ class AuthorsController < ApplicationController
     end
 
     def author_params
-        params.require(:author).permit(:name)
+        params.require(:author).permit(:name, :author_image)
       end
 
 end

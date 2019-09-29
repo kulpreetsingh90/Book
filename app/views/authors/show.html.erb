@@ -1,0 +1,13 @@
+<h1>Author</h1>
+<div>
+    Author Name: <%= @author.name%> 
+
+    <% if @author.author_image.attached? %>
+  <hr/>
+  <div>
+    <div>
+      <%= image_tag @author.author_image.variant(resize: "500x200") %>
+    </div>
+  </div>
+<% end %>
+</div>
