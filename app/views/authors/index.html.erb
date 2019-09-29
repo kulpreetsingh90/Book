@@ -1,0 +1,11 @@
+<h1>Authors List</h1>
+<div>
+        <% @authors.each do |author| %>
+        <ul style="list-style-type:circle;">
+        <li><%= author.name %></li>
+        </ul>
+        <% end %>
+</div><br>
+
+<%= link_to "create a new Author", new_author_path %>&nbsp;
+<%= link_to "create a new Article", new_article_path %>

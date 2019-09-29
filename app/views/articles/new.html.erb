@@ -1,0 +1,18 @@
+<%= form_for @articles do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+
+  <div>
+    <%= f.label :author %>
+    <%= f.select :author_id, options_from_collection_for_select(Author.all, :id, :name) %>
+  </div>
+
+  <div><%= f.submit %></div>
+<% end %>
